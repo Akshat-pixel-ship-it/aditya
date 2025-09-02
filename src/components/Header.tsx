@@ -27,7 +27,11 @@ const Header = () => {
             <a href="#courses" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
               Courses
             </a>
+            <a href="#athlete" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+              About Coach
+            </a>
             <a href="#reviews" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+              Reviews
             </a>
             <a href="#contact" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
               Contact
@@ -53,6 +57,9 @@ const Header = () => {
               </a>
               <a href="#courses" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
                 Courses
+              </a>
+              <a href="#athlete" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
+                About Coach
               </a>
               <a href="#reviews" className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">
                 Reviews

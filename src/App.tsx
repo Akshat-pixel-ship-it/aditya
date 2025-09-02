@@ -5,6 +5,7 @@ import Programs from './components/Programs';
 import Courses from './components/Courses';
 import Reviews from './components/Reviews';
 import Testimonials from './components/Testimonials';
+import AthletePage from './components/AthletePage';
 import Footer from './components/Footer';
 import BackgroundShapes from './components/BackgroundShapes';
 
@@ -18,6 +19,7 @@ function App() {
         <Programs />
         <Courses />
         <Reviews />
+        <AthletePage />
         <Testimonials />
         <Footer />
       </div>
