@@ -279,5 +279,3 @@ const AthletePage = () => {
 };
 
 export default AthletePage;
-
-export default AthletePage
