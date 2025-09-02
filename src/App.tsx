@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Programs from './components/Programs';
 import Courses from './components/Courses';
+import Reviews from './components/Reviews';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import BackgroundShapes from './components/BackgroundShapes';
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <Programs />
         <Courses />
+        <Reviews />
         <Testimonials />
         <Footer />
       </div>
