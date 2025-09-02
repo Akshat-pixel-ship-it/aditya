@@ -77,6 +77,7 @@ const Courses = () => {
             <div
               key={index}
               className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 hover:transform hover:scale-105 ${
+              className={`relative bg-white/15 backdrop-blur-md rounded-3xl p-8 border transition-all duration-500 hover:transform hover:scale-105 ${
                 course.popular 
                   ? 'border-yellow-400 shadow-2xl shadow-yellow-500/20 transform scale-105' 
                   : 'border-yellow-500/20 hover:border-yellow-500/40'
@@ -128,7 +129,7 @@ const Courses = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Need a custom plan? We've got you covered.</p>
-          <button className="bg-white/10 backdrop-blur-sm border border-yellow-500/30 text-yellow-400 px-8 py-3 rounded-full font-medium hover:bg-yellow-500/10 hover:border-yellow-500/50 transition-all duration-300">
+          <button className="bg-white/20 backdrop-blur-md border border-yellow-500/30 text-yellow-400 px-8 py-3 rounded-full font-medium hover:bg-yellow-500/20 hover:border-yellow-500/50 transition-all duration-300">
             Contact for Custom Pricing
           </button>
         </div>

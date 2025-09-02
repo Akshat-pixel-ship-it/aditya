@@ -31,15 +31,15 @@ const Hero = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:transform hover:scale-105">
             <div className="text-3xl font-bold text-yellow-400 mb-2">500+</div>
             <div className="text-gray-300">Success Stories</div>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:transform hover:scale-105">
             <div className="text-3xl font-bold text-yellow-400 mb-2">50+</div>
             <div className="text-gray-300">Expert Trainers</div>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:transform hover:scale-105">
             <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
             <div className="text-gray-300">Support Available</div>
           </div>
