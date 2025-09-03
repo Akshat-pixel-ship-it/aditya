@@ -60,7 +60,7 @@ const Reviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="group bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 relative overflow-hidden"
+              className="group bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-500 hover:transform hover:scale-102 hover:shadow-2xl hover:shadow-yellow-500/20 relative overflow-hidden"
             >
               {/* Quote icon */}
               <div className="absolute top-6 right-6 opacity-20">

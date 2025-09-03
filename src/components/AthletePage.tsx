@@ -93,7 +93,7 @@ const AthletePage = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-8"
             >
-              <div className="bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20">
+              <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-yellow-500/20">
                 <p className="text-lg text-gray-100 leading-relaxed mb-6">
                   Aditya Sandu is a passionate athlete and coach, dedicated to transforming lives through fitness. 
                   With experience across multiple sports, bodybuilding, and personal training, he has guided 
@@ -129,7 +129,7 @@ const AthletePage = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                        className="bg-yellow-500/20 border border-yellow-500/30 rounded-xl p-4 flex items-center space-x-3 hover:bg-yellow-500/30 transition-all duration-300"
+                        className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 flex items-center space-x-3 hover:bg-yellow-500/20 transition-all duration-300"
                       >
                         <cert.icon className="w-5 h-5 text-yellow-400" />
                         <span className="text-sm text-gray-200">{cert.name}</span>
@@ -161,7 +161,7 @@ const AthletePage = () => {
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
-            <div className="bg-white/15 backdrop-blur-md rounded-2xl p-2 border border-yellow-500/20">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-2 border border-yellow-500/20">
               <button
                 onClick={() => setActiveTab('athletes')}
                 className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 ${
@@ -218,7 +218,7 @@ const AthletePage = () => {
                       initial={{ opacity: 0, x: 50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: index * 0.2 }}
-                      className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300"
+                      className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300"
                     >
                       <div className="flex space-x-1 mb-4">
                         {[...Array(5)].map((_, i) => (
@@ -241,7 +241,7 @@ const AthletePage = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white/15 backdrop-blur-md rounded-3xl p-8 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 relative overflow-hidden"
+                    className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 relative overflow-hidden"
                   >
                     {/* Customer avatar */}
                     <div className="flex items-center mb-6">

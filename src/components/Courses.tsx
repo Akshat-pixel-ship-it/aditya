@@ -1,139 +1,136 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Clock, Users, Trophy, Star } from 'lucide-react';
+import { Check, Target, Trophy, Zap } from 'lucide-react';
 
 const Courses = () => {
   const courses = [
     {
-      id: 1,
-      title: "Personal Training",
-      duration: "1-on-1 Sessions",
-      students: "50+",
-      rating: 4.9,
-      price: "₹2,000/session",
-      description: "Customized workout plans and nutrition guidance tailored to your specific goals.",
-      features: ["Personalized workout plans", "Nutrition guidance", "Progress tracking", "24/7 support"]
+      icon: Target,
+      name: "Lifestyle Performance Package",
+      price: "₹9,999",
+      duration: "Per Month",
+      description: "For fat loss, muscle gain, and general fitness",
+      features: [
+        "Personalized 3–5 day training plan",
+        "Nutrition guidance (calorie/macro targets + sample meal guides)",
+        "Bi-weekly check-ins via messaging/email",
+        "Progress tracking (measurements & photos every 4 weeks)",
+        "Exercise demo library access",
+        "2 monthly video calls"
+      ],
+      popular: false,
+      color: "from-yellow-400 to-yellow-500"
     },
     {
-      id: 2,
-      title: "Group Fitness",
-      duration: "60 min sessions",
-      students: "200+",
-      rating: 4.8,
-      price: "₹800/session",
-      description: "High-energy group workouts that build strength, endurance, and community.",
-      features: ["Group motivation", "Varied workouts", "Social fitness", "Cost effective"]
+      icon: Trophy,
+      name: "Athlete Development Package",
+      price: "₹14,999",
+      duration: "Per Month",
+      description: "For competitive athletes: strength, speed, endurance, and sport-specific training",
+      features: [
+        "Sport-specific strength & conditioning program (updated every 4 weeks)",
+        "Speed, agility & plyometric drills",
+        "Conditioning tailored to sport",
+        "Recovery & mobility programming",
+        "Weekly video performance review & feedback",
+        "Performance testing every 12 weeks"
+      ],
+      popular: true,
+      color: "from-yellow-300 to-orange-400"
     },
     {
-      id: 3,
-      title: "Online Coaching",
-      duration: "Flexible timing",
-      students: "300+",
-      rating: 4.9,
-      price: "₹1,200/month",
-      description: "Remote fitness coaching with video calls, custom plans, and continuous support.",
-      features: ["Video consultations", "Custom meal plans", "Workout videos", "Progress monitoring"]
+      icon: Zap,
+      name: "Strength & Power Package",
+      price: "₹11,999",
+      duration: "Per Month",
+      description: "For powerlifters & strength/hypertrophy-focused lifters",
+      features: [
+        "Periodized training program (strength, hypertrophy, peaking phases)",
+        "Squat/bench/deadlift technique breakdown (video analysis 2x/month)",
+        "Accessory lift programming for weak points",
+        "Competition prep strategy (if competing)",
+        "Recovery protocols for strength athletes",
+        "Optional nutrition coaching",
+        "1x weekly coaching call"
+      ],
+      popular: false,
+      color: "from-orange-400 to-red-500"
     }
   ];
 
   return (
-    <section id="courses" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50" />
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-amber-200/20 to-orange-200/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-orange-200/20 to-amber-200/20 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Training <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Programs</span>
+    <section id="courses" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Training Packages
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose from our range of fitness programs designed to help you achieve your goals
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Choose from our specialized training packages designed by expert coaches to help you 
+            achieve your specific fitness goals with personalized guidance and support.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <motion.div
-              key={course.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group"
+            <div
+              key={index}
+              className={`relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 hover:transform hover:scale-105 ${
+                course.popular 
+                  ? 'border-yellow-400 shadow-2xl shadow-yellow-500/20 transform scale-105' 
+                  : 'border-yellow-500/20 hover:border-yellow-500/40'
+              }`}
             >
-              <div className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl p-8 h-full hover:bg-white/25 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/10">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-2">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-4 h-4 ${
-                            i < Math.floor(course.rating)
-                              ? 'text-amber-400 fill-current'
-                              : 'text-gray-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm font-medium text-gray-700">{course.rating}</span>
+              {course.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    MOST POPULAR
                   </div>
-                  <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
+                </div>
+              )}
+
+              <div className="text-center mb-8">
+                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${course.color} mb-4 shadow-lg`}>
+                  <course.icon className="w-8 h-8 text-black" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{course.name}</h3>
+                <p className="text-gray-400 mb-4">{course.description}</p>
+                <div className="mb-2">
+                  <span className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                     {course.price}
-                  </div>
+                  </span>
                 </div>
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-amber-600 transition-colors">
-                  {course.title}
-                </h3>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {course.description}
-                </p>
-
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center text-gray-700">
-                    <Clock className="w-5 h-5 mr-3 text-amber-600" />
-                    <span>{course.duration}</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <Users className="w-5 h-5 mr-3 text-amber-600" />
-                    <span>{course.students} students trained</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <Trophy className="w-5 h-5 mr-3 text-amber-600" />
-                    <span>Proven results</span>
-                  </div>
-                </div>
-
-                <div className="space-y-2 mb-8">
-                  {course.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mr-3" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-amber-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  Get Started
-                </motion.button>
+                <div className="text-gray-400">{course.duration}</div>
               </div>
-            </motion.div>
+
+              <ul className="space-y-4 mb-8">
+                {course.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-gray-300">
+                    <div className="w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <Check className="w-3 h-3 text-black" />
+                    </div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <button className={`w-full py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 ${
+                course.popular
+                  ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:shadow-2xl hover:shadow-yellow-500/30'
+                  : 'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:shadow-2xl hover:shadow-yellow-500/20'
+              }`}>
+                Choose Plan
+              </button>
+            </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-400 mb-4">Need a custom plan? We've got you covered.</p>
+          <button className="bg-white/10 backdrop-blur-sm border border-yellow-500/30 text-yellow-400 px-8 py-3 rounded-full font-medium hover:bg-yellow-500/10 hover:border-yellow-500/50 transition-all duration-300">
+            Contact for Custom Pricing
+          </button>
         </div>
       </div>
     </section>
