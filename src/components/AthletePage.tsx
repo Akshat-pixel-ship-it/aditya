@@ -51,20 +51,7 @@ const AthletePage = () => {
       {/* About Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                About Aditya Sandu
-              </span>
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Profile Image */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -73,7 +60,7 @@ const AthletePage = () => {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="w-80 h-80 rounded-3xl overflow-hidden border-4 border-yellow-500/30 shadow-2xl shadow-yellow-500/20">
+                <div className="w-80 h-96 rounded-3xl overflow-hidden border-4 border-yellow-500/30 shadow-2xl shadow-yellow-500/20">
                   <img 
                     src="https://i.imgur.com/Gbs73eG.jpeg" 
                     alt="Aditya Sandu - Fitness Coach"
@@ -86,13 +73,22 @@ const AthletePage = () => {
               </div>
             </motion.div>
 
-            {/* About Content */}
+            {/* Heading and About Content */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-8"
             >
+              {/* Heading */}
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    About Aditya Sandu
+                  </span>
+                </h2>
+              </div>
+
               <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-yellow-500/20">
                 <p className="text-lg text-gray-100 leading-relaxed mb-6">
                   Aditya Sandu is a passionate athlete and coach, dedicated to transforming lives through fitness. 
